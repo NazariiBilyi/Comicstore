@@ -39,8 +39,5 @@ public class UserEntity extends BaseEntity {
 	@Enumerated(EnumType.ORDINAL)
 	private UserRole role;
 	
-	@OneToMany(mappedBy = "user")
-	private List<OrderEntity> orders;
-	
 	
 }
