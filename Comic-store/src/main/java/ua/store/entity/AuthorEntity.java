@@ -14,7 +14,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "authors")
-public class AuthorEntity {
+public class AuthorEntity extends BaseEntity{
 
 	private String authorId;
 	

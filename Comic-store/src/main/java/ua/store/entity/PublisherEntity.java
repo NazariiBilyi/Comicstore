@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "publisher")
-public class PublisherEntity {
+public class PublisherEntity extends BaseEntity {
 
 	private String publisherId;
 	

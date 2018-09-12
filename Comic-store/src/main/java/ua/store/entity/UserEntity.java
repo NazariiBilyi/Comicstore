@@ -1,5 +1,7 @@
 package ua.store.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -21,7 +23,7 @@ import ua.store.entity.enums.UserRole;
 
 @Entity
 @Table(name = "users")
-public class UserEntity {
+public class UserEntity extends BaseEntity {
 	
 	@Column(nullable = false, unique = true)
 	private String username;
@@ -35,4 +37,7 @@ public class UserEntity {
 	
 	@Enumerated(EnumType.ORDINAL)
 	private UserRole role;
+	
+	private List<OrderEntity> orders;
+	
 }

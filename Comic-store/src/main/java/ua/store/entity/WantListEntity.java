@@ -17,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "want_list")
 
-public class WantListEntity {
+public class WantListEntity extends BaseEntity{
 
 	private List<ProductEntity> products;
 	
