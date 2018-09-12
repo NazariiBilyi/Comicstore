@@ -1,6 +1,9 @@
 package ua.store.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -18,5 +21,8 @@ public class PublisherEntity extends BaseEntity {
 	private String publisherId;
 	
 	private String name;
+	
+	@OneToMany(mappedBy = "publisher")
+	private List<ProductEntity> products;
 	
 }

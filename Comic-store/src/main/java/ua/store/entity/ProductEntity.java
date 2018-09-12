@@ -8,6 +8,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -34,7 +36,13 @@ public class ProductEntity extends BaseEntity{
 	
 	private String imageUrl;
 	
+	@ManyToOne
+	@JoinColumn(name = "publisher_id", nullable = false)
 	private PublisherEntity publisher;
+	
+	@ManyToOne
+	@JoinColumn(name = "product_catalog_id", nullable = false)
+	private ProductCatalogEntity catalog;
 	
 	@Enumerated(EnumType.ORDINAL)
 	private ProductAvailability availability;
@@ -46,5 +54,6 @@ public class ProductEntity extends BaseEntity{
 	@Column(name = "publish_date")
 	private LocalDate publishDate;
 	
+
 
 }
