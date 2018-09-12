@@ -11,6 +11,4 @@ public enum UserRole implements GrantedAuthority {
 		return name();
 	}
 	
-	
-	
 }

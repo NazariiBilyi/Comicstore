@@ -2,6 +2,7 @@ package ua.store.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,6 +27,8 @@ public class OrderEntity extends BaseEntity{
 	
 	@Column(name = "order_date")
 	private LocalDate orderDate;
+	
+	private List<ProductEntity> products;
 	
 	@Column(name = "order_items_number")
 	private Integer orderItemsNumber;
